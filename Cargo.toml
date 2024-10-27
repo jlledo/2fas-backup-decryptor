@@ -1,0 +1,21 @@
+[package]
+name = "twofas-backup-decryptor"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "decrypt-2fas-backup"
+path = "src/main.rs"
+
+[dependencies]
+aes-gcm = { version = "0.10", features = ["std"] }
+anyhow = "1.0"
+base64 = "0.22"
+clap = { version = "4.5", features = ["derive"] }
+clio = { version = "0.3", features = ["clap-parse"] }
+itertools = "0.13"
+pbkdf2 = "0.12"
+rpassword = "7.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
